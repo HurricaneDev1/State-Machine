@@ -57,7 +57,6 @@ public class PlayerController : MonoBehaviour
     }
 
     void MoveState() {
-        sr.color = Color.cyan;
         MoveX(1.0f);
         // jump input
         float yHat = new Vector2(0, Input.GetAxis("Vertical")).normalized.y;
@@ -69,7 +68,6 @@ public class PlayerController : MonoBehaviour
     }
 
     void JumpState() {
-        sr.color = Color.magenta;
         MoveX(IN_AIR_PCT);
         
         if (isGrounded) {
